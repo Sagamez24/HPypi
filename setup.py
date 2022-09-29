@@ -44,7 +44,7 @@ def main():
         author_email="restrepo@udea.edu.co",
 
         # Packages
-        packages=find_packages(exclude=['tests']),
+        packages=find_packages(exclude=['tests'],"scs"),
 
         # Include additional files into the package
         include_package_data=True,
@@ -64,7 +64,6 @@ def main():
         # See: https://github.com/pypa/pipenv/issues/2171
         #install_requires=['numpy','pandas','dask','anomalies'],
         package_dir={"scs": "src"},
-        packages=["scs"],
         ext_modules=ext_modules,
         cmdclass={"build_ext": build_ext_scs},
         setup_requires=["numpy >= 1.7"],
