@@ -5,8 +5,8 @@ Hello moduleHPypi module
 import dask.array as da
 import numpy as np
 import random
-import itertools
-from itertools import permutations
+#import itertools
+#from itertools import permutations
 
 #def hello():
 #    r'''
