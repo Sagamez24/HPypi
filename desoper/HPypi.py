@@ -2,7 +2,7 @@
 r'''
 Hello moduleHPypi module
 '''
-
+import dask.array as da
 
 #def hello():
 #    r'''
