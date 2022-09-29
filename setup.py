@@ -34,13 +34,13 @@ if os.name in ('nt', 'dos'):
 def main():
     setup(
         # Application name:
-        name="desoper",
+        name="HPypi",
 
         # Version number (initial):
-        version="0.0.3",
+        version="0.0.1",
 
         # Application author details:
-        author="restrepo",
+        author="Hinestroza",
         author_email="restrepo@udea.edu.co",
 
         # Packages
@@ -62,7 +62,7 @@ def main():
 
         # Dependent packages (distributions)
         # See: https://github.com/pypa/pipenv/issues/2171
-        # install_requires=[],
+        install_requires=['numpy','pandas','dask','anomalies'],
     )
 
 
