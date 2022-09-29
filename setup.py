@@ -44,7 +44,7 @@ def main():
         author_email="restrepo@udea.edu.co",
 
         # Packages
-        packages=find_packages(exclude=['tests'],["scs"]),
+        packages=find_packages(exclude=['tests']),
 
         # Include additional files into the package
         include_package_data=True,
