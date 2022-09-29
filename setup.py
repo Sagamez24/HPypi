@@ -64,9 +64,11 @@ def main():
         # Dependent packages (distributions)
         # See: https://github.com/pypa/pipenv/issues/2171
         #install_requires=['numpy','pandas','dask','anomalies'],
-        setup_requires=["numpy >= 1.7"],
-        install_requires=["numpy >= 1.7", "scipy >= 0.13.2","dask"],
-        #install_requires=['dask','numpy','anomalies','pandas'],
+        #setup_requires=["numpy >= 1.7"],
+        #install_requires=["numpy >= 1.7", "scipy >= 0.13.2","dask"],
+        install_requires=['numpy==1.16.5; python_version=="3.7"',
+            'numpy>=1.16.5; python_version=="3.8"',
+            'numpy>=1.16.5; python_version=="3.9"'],
     )
 
 
