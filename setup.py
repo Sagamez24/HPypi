@@ -71,7 +71,10 @@ def main():
             'numpy>=1.16.5; python_version=="3.9"',
             'dask==2022.2.1; python_version=="3.7"',
             'dask==2022.2.1; python_version=="3.8"',
-            'dask==2022.2.1; python_version=="3.9"'],
+            'dask==2022.2.1; python_version=="3.9"',
+            'pandas==1.4.2; python_version=="3.7"',
+            'pandas==1.4.2; python_version=="3.8"',
+            'pandas==1.4.2; python_version=="3.9"'],
     )
 
 
