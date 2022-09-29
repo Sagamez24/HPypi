@@ -3,6 +3,7 @@ r'''
 Hello moduleHPypi module
 '''
 import dask.array as da
+import numpy as np
 import random
 from itertools import permutations
 
