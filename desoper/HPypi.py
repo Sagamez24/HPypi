@@ -6,8 +6,8 @@ Hello moduleHPypi module
 import numpy as np
 from functools import cached_property
 #import random
-#import itertools
-#from itertools import permutations
+import itertools
+from itertools import permutations
 
 #def hello():
 #    r'''
