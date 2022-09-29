@@ -3,7 +3,7 @@ r'''
 Hello moduleHPypi module
 '''
 import dask.array as da
-import numpy as np
+#import numpy as np
 from functools import cached_property
 #import random
 #import itertools
