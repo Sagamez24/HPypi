@@ -4,15 +4,24 @@ Hello moduleHPypi module
 '''
 
 
-def hello():
-    r'''
-    Hello function
-    '''
-    return 'Hello, World!'
+#def hello():
+#    r'''
+#    Hello function
+#    '''
+#    return 'Hello, World!'
 
+def valor_m(n):
+    """
+    valor_m muestra el la cantidad de L y K que se produciran 
+    """
+    if n%2==0:
+        m = n/2 -1
+    else:
+        m = (n-3)/2
+    return m
 
-if __name__ == '__main__':
-    r'''
-    Hello main
-    '''
-    hello()
+#if __name__ == '__main__':
+#    r'''
+#    Hello main
+#    '''
+#    hello()
