@@ -36,10 +36,10 @@ def main(args):
   
   if args.number:
       
-      c=solucion_total(args.number,args.magnitud,args.numlist,args.zmaximo,args.imaximo)
-      c.to_json(args.output_name+'.json',orient='records')
+      e=solucion_total(args.number,args.magnitud,args.numlist,args.zmaximo,args.imaximo)
+      e.to_json(args.output_name+'.json',orient='records')
         
-  return  print(c) 
+  return  print(e) 
  
 if __name__ == '__main__': 
     args=iniciar()
