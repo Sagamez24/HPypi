@@ -14,7 +14,8 @@ import itertools
 from itertools import permutations
 import warnings # ignora los warnings durante compilación
 warnings.filterwarnings("ignore")# ignora los warnings durante compilación
-
+global zmax
+zmax=30
 #def hello():
 #    r'''
 #    Hello function
@@ -73,7 +74,7 @@ def _get_chiral(q,q_max=np.inf):
     else:
         return None,None
     
-def get_solution(l,k,zmax): #aquí me devuelve q como un diccionario
+def get_solution(l,k,zmax=zmax): #aquí me devuelve q como un diccionario
     q,gcd=_get_chiral( z(l,k) )
     #if q is not None and np.abs(q).max()<=zmax:#
     if q is not None and np.abs(q).max()<=zmax:
@@ -81,7 +82,7 @@ def get_solution(l,k,zmax): #aquí me devuelve q como un diccionario
     else:
         return {}
     
-def get_solution_from_list(lk,zmax):
+def get_solution_from_list(lk,zmax=zmax):
     n=len(lk)
     l=lk[:n//2]
     k=lk[n//2:]
