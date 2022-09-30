@@ -7,13 +7,13 @@ The related software just print `Hello World!`. To avoid conflicts with the pack
 
 ## Install
 ```bash
-$ pip install -i https://test.pypi.org/simple/ desoper
+$ pip install -i https://test.pypi.org/simple/ HPypi
 ```
 ## USAGE
 ```python
->>> from desoper import hello
->>> hello.hello()
-Hello World!
+>>> from desoper import HPypi
+>>> HPypi.solucion_total(5,9,400000,30,0)
+(11,4)
 ```
 Links:
 * [Test pip page](https://test.pypi.org/project/desoper/)
