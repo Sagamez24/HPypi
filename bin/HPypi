@@ -1,1 +1,46 @@
+#!/usr/bin/env python3
+# programa arparseg su funcion es capturar la informacion ingresada por el usuario desde  desde la terminal 
+#######################################
+#program name --N=500000 --m=9 --zmax=30 --imax=0 --output_name='solution' 6
+#######################################
 
+from typing_extensions import Type
+
+# Import the library
+#from desoper import abc123# debo importar funciones del archivo pc 
+import argparse
+#from desoper.myfirstpypi import principal 
+import sys 
+def iniciar():
+
+    parser = argparse.ArgumentParser(description='argumentos de pedida del programa')
+
+    # entrada argumento numero 1 
+    parser.add_argument('-N', '--numlist',type= int,default=500000,required=True,help='espacio de listas de posibles repuestas')
+    # entrada argumento numero 2 
+    parser.add_argument('-M', '--magnitud',type=int,default=1,required=True,help='agregue enteros mayores que 1 hasta que obtenga soluciones completas ')
+    # entrada argumento numero 3 
+    parser.add_argument('-zmax', '--zmaximo',type=int,default=30,required=True,help='valor del zmaximo')
+    # entrada argumento numero 4 
+    parser.add_argument('-imax', '--imaximo',type=int,default=0, required=True, help='valor de iteraciones hechas para recoorre el espacio de posibñes respuestas')
+    # entrada argumento numero 5
+    parser.add_argument('-n', '--number',type=int,default=5,required=True,action='store',help='entero para que es la dimension de z ')
+    # argumento de guardado de archivo
+    
+    parser.add_argument('-w', '--output_name',type=str,default="solution",required=False,action='store',help='entero para que es la dimension de z ')
+    
+    args = parser.parse_args()
+    return args
+
+def main(args): 
+  
+  if args.number:
+      
+      c=solucion_total(args.number,args.magnitud,args.numlist,args.zmaximo,args.imaximo)
+      c.to_json(args.output_name+'.json',orient='records')
+        
+  return  print(c) 
+ 
+if __name__ == '__main__': 
+    args=iniciar()
+    main(args)
