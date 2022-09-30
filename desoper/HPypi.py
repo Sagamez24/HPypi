@@ -124,10 +124,10 @@ def solucion_total(n, M, Nmax, zmax, imax):
           df['zs']=df['z'].astype(str)
           df=df.drop_duplicates('zs').drop('zs',axis='columns').reset_index(drop=True)
 
-          if n==5:
-             assert df.shape==(11,4)
-          elif n==6:
-             assert df.shape==(141,4)
+          #if n==5:
+           #  assert df.shape==(11,4)
+          #elif n==6:
+          #   assert df.shape==(141,4)
           print('unique solutions → ',df.shape)
           Δ_size=df.shape[0]-size_old
           if Δ_size>0:
