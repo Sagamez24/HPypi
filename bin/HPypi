@@ -16,18 +16,18 @@ def iniciar():
     parser = argparse.ArgumentParser(description='argumentos de pedida del programa')
 
     # entrada argumento numero 1 
-    parser.add_argument('-N', '--numlist',type= int,default=500000,required=True,help='espacio de listas de posibles repuestas')
+    parser.add_argument('-N', '--numlist',type= int,required=True,help='espacio de listas de posibles repuestas')
     # entrada argumento numero 2 
-    parser.add_argument('-M', '--magnitud',type=int,default=1,required=True,help='agregue enteros mayores que 1 hasta que obtenga soluciones completas ')
+    parser.add_argument('-M', '--magnitud',type=int,required=True,help='agregue enteros mayores que 1 hasta que obtenga soluciones completas ')
     # entrada argumento numero 3 
-    parser.add_argument('-zmax', '--zmaximo',type=int,default=30,required=True,help='valor del zmaximo')
+    parser.add_argument('-zmax', '--zmaximo',type=int,required=True,help='valor del zmaximo')
     # entrada argumento numero 4 
-    parser.add_argument('-imax', '--imaximo',type=int,default=0, required=True, help='valor de iteraciones hechas para recoorre el espacio de posibñes respuestas')
+    parser.add_argument('-imax', '--imaximo',type=int, required=True, help='valor de iteraciones hechas para recoorre el espacio de posibñes respuestas')
     # entrada argumento numero 5
-    parser.add_argument('-n', '--number',type=int,default=5,required=True,action='store',help='entero para que es la dimension de z ')
+    parser.add_argument('-n', '--number',type=int,required=True,action='store',help='entero para que es la dimension de z ')
     # argumento de guardado de archivo
     
-    parser.add_argument('-w', '--output_name',type=str,default="solution",required=False,action='store',help='entero para que es la dimension de z ')
+    parser.add_argument('-w', '--output_name',type=str,required=False,action='store',help='entero para que es la dimension de z ')
     
     args = parser.parse_args()
     return args
