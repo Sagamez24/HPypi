@@ -96,31 +96,43 @@ from multiprocessing import cpu_count
 def solucion_total(n, M, Nmax):
     Z_sol = (vector_like(n, M, Nmax))
     print(f'El arreglo vectorlike es:{Z_sol}')
-
-    df=pd.DataFrame()
-    #s=time.time()
-    Z_sol=Z_sol.compute()
-    #print('grid → ',time.time()-s,Z_sol.shape)
-
-    #s=time.time()
-    pool = Pool(cpu_count())
-    proceso = pool.map(get_solution_from_list, Z_sol)
-    pool.close()
-    del Z_sol
     
-    proceso=[d for d in proceso if d]
-    #print('sols → ',time.time()-s,len(proceso))
-    df=df.append( proceso )#, ignore_index=True    )  
+    dd=np.arange(0,100)
+    size_old=0
+    imax=dd[imax]
+    i=0
+    df=pd.DataFrame()
+    Δ_size=1
+    #s=time.time()
+    
+    while Δ_size>-10: 
+          Z_sol=Z_sol.compute()
+          #print('grid → ',time.time()-s,Z_sol.shape)
 
-    df.sort_values('gcd')
-    df['zs']=df['z'].astype(str)
-    df=df.drop_duplicates('zs').drop('zs',axis='columns').reset_index(drop=True)
+          #s=time.time()
+          pool = Pool(cpu_count())
+          proceso = pool.map(get_solution_from_list, Z_sol)
+          pool.close()
+          del Z_sol
+    
+          proceso=[d for d in proceso if d]
+          #print('sols → ',time.time()-s,len(proceso))
+          df=df.append( proceso )#, ignore_index=True    )  
 
-    if n==5:
-       assert df.shape==(12,4)
-    elif n==6:
-       assert df.shape==(141,4)
-    print('unique solutions → ',df.shape)
+          df.sort_values('gcd')
+          df['zs']=df['z'].astype(str)
+          df=df.drop_duplicates('zs').drop('zs',axis='columns').reset_index(drop=True)
+
+          if n==5:
+             assert df.shape==(12,4)
+          elif n==6:
+             assert df.shape==(141,4)
+          print('unique solutions → ',df.shape)
+          Δ_size=df.shape[0]-size_old
+          if Δ_size>0:
+             size_old=df.shape[0]
+          if i>=imax:
+             break
     return df
     
 #if __name__ == '__main__':
