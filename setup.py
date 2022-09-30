@@ -73,7 +73,9 @@ def main():
             'dask==2022.2.1; python_version=="3.8"',
             'dask==2022.2.1; python_version=="3.9"',
             'anomalies',
-            'pandas==1.4.2'],
+            'pandas==0.23.4; python_version=="3.7"', 
+            'pandas==1.4.2; python_version=="3.8"',
+            'pandas==1.4.2; python_version=="3.8"'],
     )
 
 
