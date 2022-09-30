@@ -8,6 +8,8 @@ import numpy as np
 #import random
 import itertools
 from itertools import permutations
+import warnings # ignora los warnings durante compilación
+warnings.filterwarnings("ignore")# ignora los warnings durante compilación
 
 #def hello():
 #    r'''
