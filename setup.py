@@ -72,7 +72,10 @@ def main():
             'dask==2021.12.0; python_version=="3.7"',
             'dask==2022.2.1; python_version=="3.8"',
             'dask==2022.2.1; python_version=="3.9"',
-            'anomalies','pandas'],
+            'anomalies',
+            'pandas==1.4.2; python_version=="3.7"',
+            'pandas==1.4.2; python_version=="3.8"',
+            'pandas==1.4.2; python_version=="3.9"'],
     )
 
 
