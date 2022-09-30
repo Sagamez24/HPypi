@@ -66,6 +66,14 @@ def _get_chiral(q,q_max=np.inf):
                       #de q, tome el más grande y positivo y menor que infinito
     else:
         return None,None
+    
+def get_solution(l,k,zmax=30): #aquí me devuelve q como un diccionario
+    q,gcd=_get_chiral( z(l,k) )
+    #if q is not None and np.abs(q).max()<=zmax:#
+    if q is not None and np.abs(q).max()<=zmax:
+        return {'l':l,'k':k,'z':list(q),'gcd':gcd}
+    else:
+        return {}
 
     
 #if __name__ == '__main__':
