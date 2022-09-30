@@ -86,6 +86,39 @@ def get_solution_from_list(lk,zmax=32):
 
 
 assert get_solution_from_list([1,2,1,-2])['z']==[1, 1, 1, -4, -4, 5]
+
+from multiprocessing import Pool
+from multiprocessing import cpu_count
+
+def solucion_total(n, M, Nmax):
+    Z_sol = (vector_like(n, M, Nmax))
+    print(f'El arreglo vectorlike es:{Z_sol}')
+
+    df=pd.DataFrame()
+    s=time.time()
+    Z_sol=Z_sol.compute()
+    print('grid → ',time.time()-s,Z_sol.shape)
+
+    s=time.time()
+    pool = Pool(cpu_count())
+    proceso = pool.map(get_solution_from_list, Z_sol)
+    pool.close()
+    del Z_sol
+    
+    proceso=[d for d in proceso if d]
+    print('sols → ',time.time()-s,len(proceso))
+    df=df.append( proceso )#, ignore_index=True    )  
+
+    df.sort_values('gcd')
+    df['zs']=df['z'].astype(str)
+    df=df.drop_duplicates('zs').drop('zs',axis='columns').reset_index(drop=True)
+
+    if n==5:
+       assert df.shape==(12,4)
+    elif n==6:
+       assert df.shape==(141,4)
+    print('unique solutions → ',df.shape)
+    return df
     
 #if __name__ == '__main__':
 #    r'''
