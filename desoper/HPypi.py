@@ -6,6 +6,7 @@ import dask.array as da
 import numpy as np
 #from functools import cached_property
 #import random
+from anomalies import anomaly
 import itertools
 from itertools import permutations
 import warnings # ignora los warnings durante compilación
@@ -16,6 +17,8 @@ warnings.filterwarnings("ignore")# ignora los warnings durante compilación
 #    Hello function
 #    '''
 #    return 'Hello, World!'
+
+z=anomaly.free
 
 def valor_m(n):
     """
