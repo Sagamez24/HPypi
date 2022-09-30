@@ -77,7 +77,15 @@ def get_solution(l,k,zmax=30): #aquí me devuelve q como un diccionario
         return {'l':l,'k':k,'z':list(q),'gcd':gcd}
     else:
         return {}
+    
+def get_solution_from_list(lk,zmax=32):
+    n=len(lk)
+    l=lk[:n//2]
+    k=lk[n//2:]
+    return get_solution(l,k,zmax)
 
+
+assert get_solution_from_list([1,2,1,-2])['z']==[1, 1, 1, -4, -4, 5]
     
 #if __name__ == '__main__':
 #    r'''
