@@ -1,5 +1,5 @@
 import unittest
-import pandas as pd
+#import pandas as pd
 from desoper.HPypi import solucion_total
 
 
