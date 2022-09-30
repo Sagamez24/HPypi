@@ -34,7 +34,7 @@ if os.name in ('nt', 'dos'):
 def main():
     setup(
         # Application name:
-        name="desoper",
+        name="HPypi",
 
         # Version number (initial):
         version="0.0.3",
