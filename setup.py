@@ -75,7 +75,7 @@ def main():
             'anomalies',
             'pandas==0.23.4; python_version=="3.7"', 
             'pandas==1.4.2; python_version=="3.8"',
-            'pandas==1.4.2; python_version=="3.8"'],
+            'pandas==1.4.2; python_version=="3.9"'],
     )
 
 
