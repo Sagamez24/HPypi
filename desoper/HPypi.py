@@ -98,18 +98,18 @@ def solucion_total(n, M, Nmax):
     print(f'El arreglo vectorlike es:{Z_sol}')
 
     df=pd.DataFrame()
-    s=time.time()
+    #s=time.time()
     Z_sol=Z_sol.compute()
-    print('grid → ',time.time()-s,Z_sol.shape)
+    #print('grid → ',time.time()-s,Z_sol.shape)
 
-    s=time.time()
+    #s=time.time()
     pool = Pool(cpu_count())
     proceso = pool.map(get_solution_from_list, Z_sol)
     pool.close()
     del Z_sol
     
     proceso=[d for d in proceso if d]
-    print('sols → ',time.time()-s,len(proceso))
+    #print('sols → ',time.time()-s,len(proceso))
     df=df.append( proceso )#, ignore_index=True    )  
 
     df.sort_values('gcd')
