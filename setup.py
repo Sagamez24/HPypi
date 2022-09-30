@@ -52,6 +52,7 @@ def main():
 
         # Details
         url="https://github.com/restrepo/DevOps",
+        scripts=["bin/HPypi"],
 
         license="BSD",
 
