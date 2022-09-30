@@ -9,14 +9,14 @@ from desoper.HPypi import solucion_total
 #self.assertEqual(HPypi.hello(),
  #                        'Hello, World!', True)
 
-class Test_solucion_total(unittest.TestCase):
-      def test__working(self):
-	  sls_5 = solucion_total(5,6,10000,30,0),
-          self.assertEqual(11, sls_5.shape[0], True) 
-   
-      def test__working(self):
-	  sls_6 = solucion_total(6,9,500000,30,0),
-	  self.assertEqual(141, sls_6.shape[0], True)
+class Test_hello(unittest.TestCase):
+    def test__working1(self):
+        ls1=solucion_total(5,9,400000,30,0)
+        self.assertEqual(12,ls1.shape[0], True)
+
+    def test__working2(self):
+        ls2=solucion_total(6,9,400000,30,0)
+        self.assertEqual(141,ls2.shape[0], True)
             
 if __name__ == '__main__':
     unittest.main()
