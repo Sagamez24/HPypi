@@ -11,11 +11,11 @@ from desoper.HPypi import solucion_total
 
 class Test_solucion_total(unittest.TestCase):
       def test__working(self):
-	  sls_5 = solucion_total(5,6,10000,30,0)
+	  sls_5 = solucion_total(5,6,10000,30,0),
           self.assertEqual(11, sls_5.shape[0], True) 
    
       def test__working(self):
-	  sls_6 = solucion_total(6,9,500000,30,0)
+	  sls_6 = solucion_total(6,9,500000,30,0),
 	  self.assertEqual(141, sls_6.shape[0], True)
             
 if __name__ == '__main__':
