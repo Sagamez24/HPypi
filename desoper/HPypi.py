@@ -83,7 +83,11 @@ def get_solution(l,k,zmax=zmax): #aquí me devuelve q como un diccionario
         return {}
     
 def get_solution_from_list(lk,zmax=zmax):
-    n=len(lk)
+    '''
+    esta funcion devuelve el vector l+k y el maximo valor que toman
+    los elementos de la solucion Z
+    '''
+    n=len(lk) 
     l=lk[:n//2]
     k=lk[n//2:]
     return get_solution(l,k,zmax)
