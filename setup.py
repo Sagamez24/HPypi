@@ -34,10 +34,10 @@ if os.name in ('nt', 'dos'):
 def main():
     setup(
         # Application name:
-        name="HPypi",
+        name="desoper",
 
         # Version number (initial):
-        version="0.0.2",
+        version="0.0.3",
 
         # Application author details:
         author="Hinestroza",
