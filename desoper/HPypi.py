@@ -6,6 +6,7 @@ import dask.array as da
 import numpy as np
 #from functools import cached_property
 #import random
+import pandas as pd
 from anomalies import anomaly
 import itertools
 from itertools import permutations
