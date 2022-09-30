@@ -16,7 +16,7 @@ class Test_solucion_total(unittest.TestCase):
 	                        
 	   def test_n6(self):
 	      sls_6 = solucion_total(6,9,500000,30,0)
-	      self.assertEqual(141, sls_6.shape[0], True)
+	      self.assertEqual(112, sls_6.shape[0], True)
             
 if __name__ == '__main__':
     unittest.main()
