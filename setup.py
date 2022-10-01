@@ -67,7 +67,7 @@ def main():
         #install_requires=['numpy','pandas','dask','anomalies'],
         #setup_requires=["numpy >= 1.7"],
         #install_requires=["numpy >= 1.7", "scipy >= 0.13.2","dask"],
-        install_requires=[#'numpy==1.16.5; python_version=="3.7"',
+        install_requires=['numpy==1.17.3; python_version=="3.7"',
             'numpy>=1.16.5; python_version=="3.8"',
             'numpy>=1.16.5; python_version=="3.9"',
             'dask==2021.2.0; python_version=="3.7"',
