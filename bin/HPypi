@@ -30,6 +30,7 @@ def iniciar():
     parser.add_argument('-w', '--output_name',type=str,required=False,action='store',help='entero para que es la dimension de z ')
     
     args = parser.parse_args()
+    sys.stdout.write(str(solucion_total(args)))
     return args
 
 def main(args): 
