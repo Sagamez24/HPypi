@@ -70,7 +70,7 @@ def main():
         install_requires=['numpy==1.16.5; python_version=="3.7"',
             'numpy>=1.16.5; python_version=="3.8"',
             'numpy>=1.16.5; python_version=="3.9"',
-            'dask==2021.2.0; python_version=="3.7"',
+            'dask==2021.12.0; python_version=="3.7"',
             'dask==2022.2.1; python_version=="3.8"',
             'dask==2022.2.1; python_version=="3.9"',
             'anomalies==0.2.5;python_version=="3.7"',
